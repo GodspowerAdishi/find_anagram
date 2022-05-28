@@ -7,10 +7,10 @@
 def find_anagram():
     # [assignment] Add your code here
     
-    firstString = str(input("Enter your first string here: "))
-    secondString = str(input("Enter your second string here: "))
+    firstString = str.lower((input("Enter your first string here: ")))
+    secondString = str.lower((input("Enter your second string here: ")))
     
-    if(sorted(firstString.upper()) == sorted(secondString.upper())):
+    if(sorted(firstString.replace(" ", "")) == sorted(secondString.replace(" ", ""))):
         return True
         
     else:
